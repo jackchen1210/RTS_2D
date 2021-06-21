@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: bae26cfb4ece2964180eb1991280db18
+  m_SerializeEntries:
+  - m_GUID: 174cb1a3db4de8b419994fe362a89f0e
+    m_Address: HarvesterTemplate
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 4236185411697573791, guid: 174cb1a3db4de8b419994fe362a89f0e, type: 3}
+    m_TargetAsset: {fileID: 4236185411697573791, guid: 174cb1a3db4de8b419994fe362a89f0e, type: 3}
+  - m_GUID: 5a950dfab7c65894a8c9ca68ee83b238
+    m_Address: Assets/ScriptableObject/StoneBuilding.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Building
+    m_MainAsset: {fileID: 11400000, guid: 5a950dfab7c65894a8c9ca68ee83b238, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 5a950dfab7c65894a8c9ca68ee83b238, type: 2}
+  - m_GUID: ce63baf2914085c43b6571a511e471f8
+    m_Address: Assets/ScriptableObject/WoodBuilding.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Building
+    m_MainAsset: {fileID: 11400000, guid: ce63baf2914085c43b6571a511e471f8, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: ce63baf2914085c43b6571a511e471f8, type: 2}
+  - m_GUID: 0615f6abdc7aabf4e9ca93a6e0e8cfe2
+    m_Address: Assets/ScriptableObject/StoneResource.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Resource
+    m_MainAsset: {fileID: 11400000, guid: 0615f6abdc7aabf4e9ca93a6e0e8cfe2, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 0615f6abdc7aabf4e9ca93a6e0e8cfe2, type: 2}
+  - m_GUID: 2fdb9c48be4fdd54bb919af1d72b53fa
+    m_Address: Assets/ScriptableObject/WoodResource.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Resource
+    m_MainAsset: {fileID: 11400000, guid: 2fdb9c48be4fdd54bb919af1d72b53fa, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 2fdb9c48be4fdd54bb919af1d72b53fa, type: 2}
+  - m_GUID: 5d62520d1cb97bf4fa42e872576c1f83
+    m_Address: Assets/ScriptableObject/GoldResource.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Resource
+    m_MainAsset: {fileID: 11400000, guid: 5d62520d1cb97bf4fa42e872576c1f83, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 5d62520d1cb97bf4fa42e872576c1f83, type: 2}
+  - m_GUID: 6fbe3ac27c6a3d34d9645a5ccc832e53
+    m_Address: Assets/ScriptableObject/GoldBuilding.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Building
+    m_MainAsset: {fileID: 11400000, guid: 6fbe3ac27c6a3d34d9645a5ccc832e53, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 6fbe3ac27c6a3d34d9645a5ccc832e53, type: 2}
+  - m_GUID: 4397371df36a011459a8bb11159ca42f
+    m_Address: Assets/ScriptableObject/CursorBuilding.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Building
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9067ee68183929447bd08532ec60990e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 20900aa70c8e58b43adcddc93d289a2f, type: 2}
+    - {fileID: 11400000, guid: 9f6c80e860d68ec4880df67ef896f19d, type: 2}
