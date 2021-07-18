@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - MiniMap
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: BackGround
     uniqueID: 2577818547
+    locked: 0
+  - name: towerDetectCircle
+    uniqueID: 1005911555
     locked: 0
   - name: Default
     uniqueID: 0

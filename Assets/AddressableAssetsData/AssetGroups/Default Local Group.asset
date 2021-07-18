@@ -21,55 +21,93 @@ MonoBehaviour:
     m_Address: HarvesterTemplate
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 4236185411697573791, guid: 174cb1a3db4de8b419994fe362a89f0e, type: 3}
-    m_TargetAsset: {fileID: 4236185411697573791, guid: 174cb1a3db4de8b419994fe362a89f0e, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 5a950dfab7c65894a8c9ca68ee83b238
     m_Address: Assets/ScriptableObject/StoneBuilding.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Building
-    m_MainAsset: {fileID: 11400000, guid: 5a950dfab7c65894a8c9ca68ee83b238, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 5a950dfab7c65894a8c9ca68ee83b238, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: ce63baf2914085c43b6571a511e471f8
     m_Address: Assets/ScriptableObject/WoodBuilding.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Building
-    m_MainAsset: {fileID: 11400000, guid: ce63baf2914085c43b6571a511e471f8, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: ce63baf2914085c43b6571a511e471f8, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 0615f6abdc7aabf4e9ca93a6e0e8cfe2
     m_Address: Assets/ScriptableObject/StoneResource.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Resource
-    m_MainAsset: {fileID: 11400000, guid: 0615f6abdc7aabf4e9ca93a6e0e8cfe2, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 0615f6abdc7aabf4e9ca93a6e0e8cfe2, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 2fdb9c48be4fdd54bb919af1d72b53fa
     m_Address: Assets/ScriptableObject/WoodResource.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Resource
-    m_MainAsset: {fileID: 11400000, guid: 2fdb9c48be4fdd54bb919af1d72b53fa, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 2fdb9c48be4fdd54bb919af1d72b53fa, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 5d62520d1cb97bf4fa42e872576c1f83
     m_Address: Assets/ScriptableObject/GoldResource.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Resource
-    m_MainAsset: {fileID: 11400000, guid: 5d62520d1cb97bf4fa42e872576c1f83, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 5d62520d1cb97bf4fa42e872576c1f83, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 6fbe3ac27c6a3d34d9645a5ccc832e53
     m_Address: Assets/ScriptableObject/GoldBuilding.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Building
-    m_MainAsset: {fileID: 11400000, guid: 6fbe3ac27c6a3d34d9645a5ccc832e53, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 6fbe3ac27c6a3d34d9645a5ccc832e53, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 4397371df36a011459a8bb11159ca42f
     m_Address: Assets/ScriptableObject/CursorBuilding.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - Building
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 39c27eb425a9b2347a67166d2ed1969d
+    m_Address: LangSetting_Eng
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - LangSetting
+    m_MainAsset: {fileID: 11400000, guid: 39c27eb425a9b2347a67166d2ed1969d, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 39c27eb425a9b2347a67166d2ed1969d, type: 2}
+  - m_GUID: 16a3eed04ea83ed48ba6e16dcc91b05b
+    m_Address: Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 5b497416dfe693747a1d2904817b0030
+    m_Address: Assets/ScriptableObject/Building/TowerBuilding.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Building
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 8b2c65f606a884747b31e7b644b9e703
+    m_Address: Arrow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7862a9bc70a6f6b448e81f9c9ad70ff9
+    m_Address: TowerSetting
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 687203fdeadda4e40adccfbb46dca3d6
+    m_Address: BuildingConstruction
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0

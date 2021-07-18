@@ -14,8 +14,11 @@ public class SortingLayerHelper : MonoBehaviour
 
     private void Awake()
     {
-              spriteRenderer = GetComponent<SpriteRenderer>();
-        tempChildOrders = childs.Select(_ => _.sortingOrder).ToArray();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (childs != null)
+        {
+            tempChildOrders = childs.Select(_ => _.sortingOrder).ToArray();
+        }
     }
 
     private void LateUpdate()
@@ -26,7 +29,7 @@ public class SortingLayerHelper : MonoBehaviour
             for (int i = 0; i < childs.Length; i++)
             {
                 var item = childs[i];
-                item.sortingOrder = spriteRenderer.sortingOrder+ tempChildOrders[i];
+                item.sortingOrder = spriteRenderer.sortingOrder + tempChildOrders[i];
             }
         }
 
@@ -36,4 +39,3 @@ public class SortingLayerHelper : MonoBehaviour
         }
     }
 }
-    

@@ -2,20 +2,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using UniRx;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
-{
+{ 
+    [SerializeField] private GameOverUI gameOverUI;
     [SerializeField] private ResourceUI[] resourceUIs;
     [SerializeField] private BtnTemplate[] btnTemplates;
     private BuildingTypeEnum currentBuildingType;
 
     private void Start()
     {
-        AppResourceMgr.GetInstance().LoadResourceTypeAssets(OnResourceCompleted);
-        AppResourceMgr.GetInstance().LoadBuildingTypeAssets(OnBuildingCompleted);
+        gameOverUI.gameObject.SetActive(false);
+        gameOverUI.OnRetryBtnClicked = () => SceneManagerHelper.SetSceneTo(SceneManagerHelper.Scene.GameScene);
+        BuildingManager.Instance.HqBuilding.IsDead.SkipLatestValueOnSubscribe().Subscribe(CheckIsDead).AddTo(gameObject);
     }
 
-    private void OnResourceCompleted(IList<ResourceType> datas)
+    private void CheckIsDead(bool isDead)
+    {
+        if (isDead)
+        {
+            gameOverUI.gameObject.SetActive(true);
+            SceneManagerHelper.TimePause();
+        }
+    }
+
+    public void OnResourceCompleted(IList<ResourceType> datas)
     {
         var orderDatas = datas.OrderBy(_ => _.ResourceTypeEnum).ToArray();
         for (int i = 0; i < resourceUIs.Length; i++)
@@ -26,13 +39,13 @@ public class UIManager : MonoBehaviour
         TimeManager.GetInstance().OnOneSecTick += UpdateUI;
     }
 
-    private void OnBuildingCompleted(IList<BuildingType> datas)
+    public void OnBuildingCompleted(IList<BuildingType> datas)
     {
-        var orderDatas = datas.OrderBy(_=>(int)_.BuildingTypeEnum).ToArray();
+        var orderDatas = datas.OrderBy(_ => (int)_.BuildingTypeEnum).ToArray();
         for (int i = 0; i < btnTemplates.Length; i++)
         {
             BuildingType item = orderDatas[i];
-            btnTemplates[i].Init(item,OnBtnClicked);
+            btnTemplates[i].Init(item, OnBtnClicked);
         }
         UpdateBtnSelect();
     }
@@ -48,7 +61,7 @@ public class UIManager : MonoBehaviour
     {
         foreach (var item in btnTemplates)
         {
-            if(item.BuildingTypeEnum == currentBuildingType)
+            if (item.BuildingTypeEnum == currentBuildingType)
             {
                 item.SelectActive(true);
             }

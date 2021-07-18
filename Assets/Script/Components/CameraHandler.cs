@@ -20,7 +20,7 @@ public class CameraHandler : MonoBehaviour
 
     private void Update()
     {
-        target.transform.localPosition += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized * targetMovingSpeed * Time.deltaTime;
+        target.transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized * targetMovingSpeed * Time.deltaTime;
         SetCamera();
     }
 

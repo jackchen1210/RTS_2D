@@ -7,8 +7,9 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class AppResourceMgr : IDisposable
 {
-    private AsyncOperationHandle<IList<ResourceType>> assetHandle;
-    private AsyncOperationHandle<IList<BuildingType>> buildingHandle;
+    private AddressableResourceLoader<ResourceType> resourceLoader;
+    private AddressableResourceLoader<BuildingType> buildingLoader;
+    private AddressableResourceLoader<LangSetting> langLoader;
 
     private static AppResourceMgr instance;
 
@@ -23,47 +24,49 @@ public class AppResourceMgr : IDisposable
         return instance;
     }
 
+    private AppResourceMgr()
+    {
+        resourceLoader = new AddressableResourceLoader<ResourceType>("Resource");
+        buildingLoader = new AddressableResourceLoader<BuildingType>("Building");
+        langLoader = new AddressableResourceLoader<LangSetting>("LangSetting");
+    }
+
     public void LoadResourceTypeAssets(Action<IList<ResourceType>> onLoadCompleted)
     {
-        if (onLoadCompleted is null)
-        {
-            throw new ArgumentNullException(nameof(onLoadCompleted));
-        }
-        if (!assetHandle.IsValid())
-        {
-            assetHandle = Addressables.LoadAssetsAsync<ResourceType>("Resource", null);
-            assetHandle.Completed += (_) => onLoadCompleted?.Invoke(_.Result);
-        }
-        else
-        {
-            onLoadCompleted?.Invoke(assetHandle.Result);
-        }
+        resourceLoader.LoadResourceTypeAssets(onLoadCompleted);
     }
+
+    internal IList<BuildingType> GetBuildingAssets()
+    {
+        return buildingLoader.GetResourceTypeAssets();
+    }
+
+    internal IList<LangSetting> GetLangAssets()
+    {
+        return langLoader.GetResourceTypeAssets();
+    }
+
+    public IList<ResourceType> GetResourceTypeAssets()
+    {
+        return resourceLoader.GetResourceTypeAssets();
+    }
+
     public void LoadBuildingTypeAssets(Action<IList<BuildingType>> onLoadCompleted)
     {
-        if (!buildingHandle.IsValid() )
-        {
-            buildingHandle = Addressables.LoadAssetsAsync<BuildingType>("Building", null);
-            buildingHandle.Completed += (_) => onLoadCompleted?.Invoke(_.Result);
-        }
-        else
-        {
-            if (!buildingHandle.IsDone)
-            {
-                buildingHandle.Completed += (_) => onLoadCompleted?.Invoke(_.Result);
-            }
-            else
-            {
-                onLoadCompleted?.Invoke(buildingHandle.Result);
-            }
-        }
+        buildingLoader.LoadResourceTypeAssets(onLoadCompleted);
+    }
+
+    internal void LoadLangAssets(Action<IList<LangSetting>> onLoadEnd)
+    {
+        langLoader.LoadResourceTypeAssets(onLoadEnd);
     }
 
 
     public void Dispose()
     {
-        Addressables.Release(assetHandle);
-        Addressables.Release(buildingHandle);
+        resourceLoader?.Dispose();
+        buildingLoader?.Dispose();
+        langLoader?.Dispose();
         instance = null;
     }
 }

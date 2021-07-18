@@ -2,8 +2,9 @@
 {
     Cursor,
     WoodHarvester,
-    Stoneharvester,
-    Goldharvester
+    StoneHarvester,
+    GoldHarvester,
+    Tower
 }
 
 public enum ResourceTypeEnum
@@ -11,5 +12,5 @@ public enum ResourceTypeEnum
     None,
     Wood,
     Stone,
-    Gold
+    Gold,
 }
